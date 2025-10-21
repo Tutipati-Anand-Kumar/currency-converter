@@ -385,6 +385,129 @@
             color: white;
             font-weight: 600;
         }
+
+        .converter-card {
+    max-width: 600px; 
+    width: 90%; 
+    margin: 20px auto; 
+}
+
+.card-title {
+    font-size: 2.2rem; 
+}
+
+.currency-selection-container .row {
+    align-items: center !important; 
+}
+
+.swap-button-container {
+    padding-bottom: 0; 
+    height: auto; 
+    margin: 15px 0;
+}
+
+.swap-btn {
+    width: 50px; 
+    height: 50px;
+}
+
+.swap-btn:hover {
+    transform: scale(1.1); 
+}
+
+.swap-btn:active {
+    transform: scale(0.95);
+}
+
+.swap-arrows {
+    color: white; 
+}
+
+@media (min-width: 768px) {
+    .currency-selection-container .row {
+        align-items: flex-end !important; 
+    }
+    
+    .currency-selection-container .col-md-5 {
+        flex: 0 0 auto; 
+        width: 40%; 
+    }
+
+    .col-md-2 {
+        flex: 0 0 auto;
+        width: 20%; 
+    }
+    
+    .swap-button-container {
+        padding-bottom: 10px; 
+        margin: 0;
+        height: 100%; 
+        align-items: center; 
+    }
+    
+    .swap-btn {
+        width: 60px; 
+        height: 60px;
+        position: relative;
+        top: 0;
+        transform: none; 
+    }
+}
+
+@media (max-width: 767.98px) {
+    body {
+        padding: 10px;
+    }
+
+    .converter-card {
+        width: 100%; 
+        margin: 10px auto; 
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .card-body {
+        padding: 1.5rem !important;
+    }
+
+    .currency-selection-container .col-md-5, 
+    .currency-selection-container .col-md-2 {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 1rem !important;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    
+    .swap-button-container {
+        display: flex; 
+        justify-content: center;
+        margin: 10px 0; 
+    }
+    
+    .form-select, .form-control {
+        padding: 12px 15px; 
+        font-size: 1rem;
+    }
+
+    .form-label {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .convert-btn {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .card-title {
+        font-size: 1.8rem; 
+    }
+    .result-amount {
+        font-size: 1.6rem; 
+    }
+}
     </style>
 </head>
 <body>
@@ -460,8 +583,7 @@
             </div>
         </div>
     </div>
-
-    <!-- Load Bootstrap JS -->
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
         class CurrencyConverter {
